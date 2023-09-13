@@ -1,5 +1,5 @@
 const express = require('express');
-const { createUser, updateUser, getWeatherData, loginUser } = require('../controllers/userController');
+const { createUser, updateUser, getWeatherData, loginUser,getWeatherDataByDate} = require('../controllers/userController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router();
@@ -40,6 +40,14 @@ router.get('/weather', authMiddleware,async (req, res, next) => {
   }
 });
 
+//this is not working beacuse they are not allowing free users to get historical data 
+router.get('/weatherByDate/:date', authMiddleware,async (req, res, next) => {
+    try {
+      await getWeatherDataByDate(req, res);
+    } catch (err) {
+      next(err);
+    }
+});
 
 
 module.exports = router;

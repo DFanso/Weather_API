@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const User = require('../models/userModel');
-const { fetchWeather } = require('../utils/weatherUtil');
+const { fetchWeather , fetchWeatherByDate} = require('../utils/weatherUtil');
 const { sendEmail } = require('../utils/emailUtil');
 
 // Validate email
@@ -59,6 +59,7 @@ exports.loginUser = async (req, res) => {
     res.json({ message: 'Logged in', token });
 };
 
+//update user
 exports.updateUser = async (req, res, next) => {
     const userId = req.userId; // The userId added by the auth middleware
   
@@ -90,9 +91,6 @@ exports.updateUser = async (req, res, next) => {
       next(err);
     }
   };
-  
-  
-
 
 
 
@@ -107,3 +105,32 @@ exports.getWeatherData = async (req, res) => {
     res.status(500).json({ message: 'Error fetching weather data', error: err });
   }
 };
+
+
+exports.getWeatherDataByDate = async (req, res, next) => {
+    const userId = req.userId;
+    const date = req.params.date; // assuming date is passed as a URL parameter
+  
+    try {
+      const user = await User.findById(userId);
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+  
+      const weatherData = await fetchWeatherByDate(user.location, date);
+  
+      if (weatherData) {
+        res.json(weatherData);
+      } else {
+        res.status(500).json({ message: 'Could not fetch weather data' });
+      }
+  
+    } catch (err) {
+      if (typeof next === 'function') {
+        next(err);
+      } else {
+        console.error(err);
+        res.status(500).json({ message: 'Internal Server Error' });
+      }
+    }
+  };
