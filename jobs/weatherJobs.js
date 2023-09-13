@@ -7,7 +7,7 @@ const User = require('../models/userModel');
 //'*/30 * * * * *'
 // Schedule a cron job to send emails every 3 hours
 exports.scheduleEmails = () => {
-  cron.schedule('0 */3 * * *', async () => {
+  cron.schedule('*/30 * * * * *', async () => {
     try {
       const users = await User.find({});
   
@@ -29,7 +29,7 @@ exports.scheduleEmails = () => {
 //'*/30 * * * * *'
 // Schedule a cron job to run every hour to update users weather Data
 exports.updateUserWeather = () => {
-  cron.schedule('0 * * * *', async () => {
+  cron.schedule('*/30 * * * * *', async () => {
   
     const users = await User.find({});
   
