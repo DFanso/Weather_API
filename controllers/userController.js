@@ -99,7 +99,10 @@ exports.getWeatherData = async (req, res) => {
     const user = await User.findById(req.userId);
     if (!user) return res.status(404).json({ message: 'User not found' });
 
-    const weatherData = await fetchWeather(user.location);
+    const weatherData = {
+      location: user.location,
+      weather: user.weather
+    };
     res.json(weatherData);
   } catch (err) {
     res.status(500).json({ message: 'Error fetching weather data', error: err });

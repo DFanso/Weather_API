@@ -1,31 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cron = require('node-cron');
-const { sendEmail } = require('./utils/emailUtil');
-const User = require('./models/userModel');
-const { fetchWeather } = require('./utils/weatherUtil');
 require('dotenv').config();
 const errorMiddleware = require('./middlewares/errorMiddleware');
 const userRoutes = require('./routes/userRoutes');
+const { scheduleEmails, updateUserWeather } = require('./jobs/weatherJobs');
 
-//cornJob to send current weather to users who are registered in the database every 3 hours
-//'0 */3 * * *'
-//30s */30 * * * * *
-cron.schedule('0 */3 * * *', async () => {
-  try {
-    const users = await User.find({});
 
-    for (const user of users) {
-      const weatherData = await fetchWeather(user.location);
-      const temperature = weatherData.main.temp - 273.15; // Convert Kelvin to Celsius
-      await sendEmail(user.email, user.location,weatherData,temperature);
-      console.log(`Email sent to ${user.email} successfully!`);
-    }
-  } catch (error) {
-    console.log('Error:', error);
-  }
-});
-
+// Initialize cron jobs
+scheduleEmails();
+updateUserWeather();
 
 const app = express();
 app.use(express.json());

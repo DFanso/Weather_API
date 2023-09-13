@@ -23,17 +23,11 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  weatherData: [
-    {
-      date: {
-        type: Date,
-        default: Date.now,
-      },
-      weatherInfo: {
-        type: Object,
-      },
-    },
-  ],
+  weather: {
+    temperature: Number,
+    weatherDescription: String,
+    windSpeed: Number
+  }
 });
 
 // Hash the password before saving

@@ -16,7 +16,7 @@ exports.sendEmail = async (email,location,weatherData,temperature) => {
   const emailContent = weatherData ? `
   <h2>Weather for ${location || 'Unknown'}, ${weatherData.sys && weatherData.sys.country || 'Unknown'}</h2>
   <ul>
-    <li><strong>Temperature:</strong> ${temperature}°C </li>
+    <li><strong>Temperature:</strong> ${temperature.toFixed(2)}°C </li>
     <li><strong>Weather:</strong> ${weatherData.weather && weatherData.weather[0] ? `${weatherData.weather[0].main} (${weatherData.weather[0].description})` : 'Unknown'}</li>
     <li><strong>Wind Speed:</strong> ${weatherData.wind ? weatherData.wind.speed : 'Unknown'}</li>
   </ul>
