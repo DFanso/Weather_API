@@ -416,4 +416,4 @@ URL: https://weather-api-dfanso.vercel.app/api/users
 ---
 [Back to top](#weather_api)
 
->Generated at 2023-09-13 12:34:33 by [docgen](https://github.com/thedevsaddam/docgen)
+>Generated at 2023-09-13 by [docgen](https://github.com/thedevsaddam/docgen)
