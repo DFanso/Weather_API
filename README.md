@@ -21,7 +21,7 @@
   - [Milestones and Timelines](#milestones-and-timelines)
   - [Risk Assessment](#risk-assessment)
   - [Conclusion](#conclusion)
-  - [Api Documentation](#api-documentation)
+  - [Api Documentation](#API-Documentation)
 
 ---
 
@@ -108,7 +108,7 @@ WeatherApp is an application designed to provide weather updates to registered u
 
 The WeatherApp aims to keep users informed by providing them with the latest weather updates and sending them scheduled emails.
 
-## api-documentation
+## API-Documentation
 
 <!--- If we have only one group/collection, then no need for the "ungrouped" heading -->
 - [Weather\_API](#weather_api)
@@ -127,7 +127,7 @@ The WeatherApp aims to keep users informed by providing them with the latest wea
   - [Milestones and Timelines](#milestones-and-timelines)
   - [Risk Assessment](#risk-assessment)
   - [Conclusion](#conclusion)
-  - [api-documentation](#api-documentation)
+  - [API-Documentation](#api-documentation)
   - [Endpoints](#endpoints)
     - [1. Create User](#1-create-user)
       - [I. Example Request: Create User](#i-example-request-create-user)
