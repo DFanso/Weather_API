@@ -1,0 +1,594 @@
+{
+	"info": {
+		"_postman_id": "560b05d1-ae48-4891-865e-54f24498d6c1",
+		"name": "Weather_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17849869"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"DFanso\",\n  \"lastName\": \"Felcianas\",\n  \"email\": \"dfanso@pm.me\",\n   \"password\": \"123@Dfanso\",\n  \"location\": \"Colombo\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://weather-api-dfanso.vercel.app/api/users",
+							"protocol": "https",
+							"host": [
+								"weather-api-dfanso",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"DFanso\",\n  \"lastName\": \"Felcianas\",\n  \"email\": \"dfanso@pm.me\",\n   \"password\": \"123@Dfanso\",\n  \"location\": \"Colombo\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://weather-api-dfanso.vercel.app/api/users",
+									"protocol": "https",
+									"host": [
+										"weather-api-dfanso",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Sep 2023 12:10:53 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"3a-7J/ZxpBz/SjR45eTIVpcWGpvJJ8\""
+								},
+								{
+									"key": "Server",
+									"value": "Vercel"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000; includeSubDomains; preload"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "noindex"
+								},
+								{
+									"key": "X-Vercel-Cache",
+									"value": "MISS"
+								},
+								{
+									"key": "X-Vercel-Id",
+									"value": "cdg1::iad1::gv5xj-1694607052840-594c5e9b9f76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created\",\n    \"id\": \"6501a6cdcc08e4386139ffc0\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"dfanso@pm.me\",\n  \"password\": \"123@Dfanso\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://weather-api-dfanso.vercel.app/api/users/login",
+							"protocol": "https",
+							"host": [
+								"weather-api-dfanso",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"dfanso@pm.me\",\n  \"password\": \"123@Dfanso\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://weather-api-dfanso.vercel.app/api/users/login",
+									"protocol": "https",
+									"host": [
+										"weather-api-dfanso",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Length",
+									"value": "235"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Sep 2023 12:19:08 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"eb-3xGVlA2KPZ0/bUcLV/w3xEfaeq0\""
+								},
+								{
+									"key": "Server",
+									"value": "Vercel"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000; includeSubDomains; preload"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Vercel-Cache",
+									"value": "MISS"
+								},
+								{
+									"key": "X-Vercel-Id",
+									"value": "cdg1::iad1::8279d-1694607544960-cc5013396097"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Logged in\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDFhNmNkY2MwOGU0Mzg2MTM5ZmZjMCIsImVtYWlsIjoiZGZhbnNvQHBtLm1lIiwiaWF0IjoxNjk0NjA3NTQ4LCJleHAiOjE2OTQ2MTExNDh9.XffXGV7XgFa_jImGibB_7dQs9VeUCrER-T8kCz1cHps\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Weather",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDFhNmNkY2MwOGU0Mzg2MTM5ZmZjMCIsImVtYWlsIjoiZGZhbnNvQHBtLm1lIiwiaWF0IjoxNjk0NjA3MDU2LCJleHAiOjE2OTQ2MTA2NTZ9.0pkJKRWBH_nadjdvJZ1UFAlSPpw805hssA_X5rfaBHA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://weather-api-dfanso.vercel.app/api/users/weather",
+							"protocol": "https",
+							"host": [
+								"weather-api-dfanso",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"users",
+								"weather"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Weather",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDE1ODRlNWM5OGU1NGViYmFhNWNiNSIsImVtYWlsIjoibGVvZ2F2aW4xMjNAZ21haWwuY29tIiwiaWF0IjoxNjk0NjA4MDQ3LCJleHAiOjE2OTQ2MTE2NDd9.6__-71sO6kU0RTUytVdOqeDkOCA0Fl_J6NlzPno2oFY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://weather-api-dfanso.vercel.app/api/users/weather",
+									"protocol": "https",
+									"host": [
+										"weather-api-dfanso",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"api",
+										"users",
+										"weather"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Length",
+									"value": "112"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Sep 2023 12:27:36 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"70-X5zdcxpDMw3nNNFQblJ9nkyRZKw\""
+								},
+								{
+									"key": "Server",
+									"value": "Vercel"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000; includeSubDomains; preload"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Vercel-Cache",
+									"value": "BYPASS"
+								},
+								{
+									"key": "X-Vercel-Id",
+									"value": "cdg1::iad1::9l5s5-1694608056515-41d393a052cf"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"location\": \"Nattandiya\",\n    \"weather\": {\n        \"temperature\": 28,\n        \"weatherDescription\": \"Rain (light rain)\",\n        \"windSpeed\": 6.61\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Weather for specific time stamp",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDFhNmNkY2MwOGU0Mzg2MTM5ZmZjMCIsImVtYWlsIjoiZGZhbnNvQHBtLm1lIiwiaWF0IjoxNjk0NjA3MDU2LCJleHAiOjE2OTQ2MTA2NTZ9.0pkJKRWBH_nadjdvJZ1UFAlSPpw805hssA_X5rfaBHA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://weather-api-dfanso.vercel.app/api/users/weatherByDate/:date",
+							"protocol": "https",
+							"host": [
+								"weather-api-dfanso",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"users",
+								"weatherByDate",
+								":date"
+							],
+							"variable": [
+								{
+									"key": "date",
+									"value": "2023-09-15"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Weather for specific time stamp",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDFhNmNkY2MwOGU0Mzg2MTM5ZmZjMCIsImVtYWlsIjoiZGZhbnNvQHBtLm1lIiwiaWF0IjoxNjk0NjA3MDU2LCJleHAiOjE2OTQ2MTA2NTZ9.0pkJKRWBH_nadjdvJZ1UFAlSPpw805hssA_X5rfaBHA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://weather-api-dfanso.vercel.app/api/users/weatherByDate/:date",
+									"protocol": "https",
+									"host": [
+										"weather-api-dfanso",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"api",
+										"users",
+										"weatherByDate",
+										":date"
+									],
+									"variable": [
+										{
+											"key": "date",
+											"value": "2023-09-15"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Length",
+									"value": "412"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Sep 2023 12:19:28 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"19c-pIxvvSQry9GKwsnIHTPseq/iHlU\""
+								},
+								{
+									"key": "Server",
+									"value": "Vercel"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000; includeSubDomains; preload"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Vercel-Cache",
+									"value": "BYPASS"
+								},
+								{
+									"key": "X-Vercel-Id",
+									"value": "cdg1::iad1::psws5-1694607567830-7fa4613365ae"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"dt\": 1694736000,\n    \"main\": {\n        \"temp\": 298.57,\n        \"feels_like\": 299.36,\n        \"temp_min\": 298.57,\n        \"temp_max\": 298.57,\n        \"pressure\": 1011,\n        \"sea_level\": 1011,\n        \"grnd_level\": 1010,\n        \"humidity\": 84,\n        \"temp_kf\": 0\n    },\n    \"weather\": [\n        {\n            \"id\": 500,\n            \"main\": \"Rain\",\n            \"description\": \"light rain\",\n            \"icon\": \"10n\"\n        }\n    ],\n    \"clouds\": {\n        \"all\": 100\n    },\n    \"wind\": {\n        \"speed\": 4.2,\n        \"deg\": 227,\n        \"gust\": 5.75\n    },\n    \"visibility\": 10000,\n    \"pop\": 0.81,\n    \"rain\": {\n        \"3h\": 2.48\n    },\n    \"sys\": {\n        \"pod\": \"n\"\n    },\n    \"dt_txt\": \"2023-09-15 00:00:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDFhNmNkY2MwOGU0Mzg2MTM5ZmZjMCIsImVtYWlsIjoiZGZhbnNvQHBtLm1lIiwiaWF0IjoxNjk0NjA3MDU2LCJleHAiOjE2OTQ2MTA2NTZ9.0pkJKRWBH_nadjdvJZ1UFAlSPpw805hssA_X5rfaBHA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"firstName\": \"Leo\",\n  \"lastName\": \"Gavin\",\n  \"email\": \"dfanso@pm.me\",\n  \"location\": \"Colombo\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://weather-api-dfanso.vercel.app/api/users",
+							"protocol": "https",
+							"host": [
+								"weather-api-dfanso",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDFhNmNkY2MwOGU0Mzg2MTM5ZmZjMCIsImVtYWlsIjoiZGZhbnNvQHBtLm1lIiwiaWF0IjoxNjk0NjA3MDU2LCJleHAiOjE2OTQ2MTA2NTZ9.0pkJKRWBH_nadjdvJZ1UFAlSPpw805hssA_X5rfaBHA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\": \"Leo\",\n  \"lastName\": \"Gavin\",\n  \"email\": \"dfanso@pm.me\",\n  \"location\": \"Colombo\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://weather-api-dfanso.vercel.app/api/users",
+									"protocol": "https",
+									"host": [
+										"weather-api-dfanso",
+										"vercel",
+										"app"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Length",
+									"value": "231"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Sep 2023 12:19:40 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"e7-R/+7v37v7gR6F3y+fsOuMkeDnPY\""
+								},
+								{
+									"key": "Server",
+									"value": "Vercel"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=63072000; includeSubDomains; preload"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Vercel-Cache",
+									"value": "MISS"
+								},
+								{
+									"key": "X-Vercel-Id",
+									"value": "cdg1::iad1::vp7vr-1694607579935-58b6e0bfa93e"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User updated\",\n    \"user\": {\n        \"_id\": \"6501a6cdcc08e4386139ffc0\",\n        \"firstName\": \"Leo\",\n        \"lastName\": \"Gavin\",\n        \"email\": \"dfanso@pm.me\",\n        \"password\": \"$2a$10$UrklruMBDwqHDIGa2PidW.hhNR8LDSgdDNCncWS2cjDbMrQfzF8Cm\",\n        \"location\": \"Colombo\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
