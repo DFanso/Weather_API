@@ -1,8 +1,7 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const User = require('../models/userModel');
-const { fetchWeather , fetchWeatherByDate} = require('../utils/weatherUtil');
-const { sendEmail } = require('../utils/emailUtil');
+const {fetchWeatherByDate} = require('../utils/weatherUtil');
 
 // Validate email
 const validateEmail = email => {
