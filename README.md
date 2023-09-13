@@ -1,7 +1,7 @@
 # Weather_API
  ## intern assessment CodeScale  || Nodejs API
 
- ## Bakend Hosted on vercel URL [https://website-name.com](https://weather-api-dfanso.vercel.app)
+ ## Bakend Hosted on vercel URL: [dfanso/weather-api](https://weather-api-dfanso.vercel.app)
 
 
 
