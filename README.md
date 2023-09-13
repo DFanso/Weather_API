@@ -67,7 +67,7 @@ WeatherApp is an application designed to provide weather updates to registered u
 - openweathermap api
 - jsonwebtoken
 - bcryptjs
-- Custom middlewares for error handling
+- Custom middlewares for error handling and authentication
 
 ---
 
