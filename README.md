@@ -110,24 +110,6 @@ The WeatherApp aims to keep users informed by providing them with the latest wea
 
 ## API-Documentation
 
-<!--- If we have only one group/collection, then no need for the "ungrouped" heading -->
-- [Weather\_API](#weather_api)
-  - [intern assessment CodeScale  || Nodejs API](#intern-assessment-codescale---nodejs-api)
-    - [Bakend Hosted on vercel](#bakend-hosted-on-vercel)
-- [Project Explanation for WeatherApp](#project-explanation-for-weatherapp)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Objectives](#objectives)
-  - [Scope](#scope)
-    - [In Scope](#in-scope)
-    - [Out of Scope](#out-of-scope)
-  - [Technologies](#technologies)
-  - [Functional Requirements](#functional-requirements)
-  - [Non-Functional Requirements](#non-functional-requirements)
-  - [Milestones and Timelines](#milestones-and-timelines)
-  - [Risk Assessment](#risk-assessment)
-  - [Conclusion](#conclusion)
-  - [API-Documentation](#api-documentation)
   - [Endpoints](#endpoints)
     - [1. Create User](#1-create-user)
       - [I. Example Request: Create User](#i-example-request-create-user)
